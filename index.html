@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Book Library</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+          <h2>Book Library</h2>
+      </div>
+    <div class="row">
+        
+        <button class="button-primary popup-button" onclick="toggleForm()">Add New Book</button>
+        <div class="form-container">
+                    <div class="row">
+                            <div class="four columns">
+                                <label for="titleInput">Title</label>
+                                <input class="u-full-width" type="text" placeholder="E.g: Crime and Punishment" id="titleInput" required>
+                            </div>
+                            
+                            <div class="four columns">
+                                <label for="authorInput">Author</label>
+                                <input class="u-full-width" type="text" placeholder="E.g: Fyodor Dostoevsky" id="authorInput" required>
+                            </div>
+    
+                            <div class="four columns">
+                                <label for="pagesInput">Pages</label>
+                                <input class="u-full-width" type="number" placeholder="E.g: 470" id="pagesInput" required>    
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="readStatusInput">Reading Status</label>
+                            <select class="u-full-width" id="readStatusInput">
+                            <option value="false">Currently reading</option>
+                            <option value="true">Read</option>
+                        </select>
+                        <button class="button-primary" onclick="return addBookToLibrary()">Submit</button>
+                    </div>
+        </div>
+                    
+                    
+        </div>
+        <table class="u-full-width" id="table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+        <p id="feedback">Your library is empty. Try adding few books.</p>
+
+    <div class="footer">
+        <p>&copy 2018 - Crafted with <i class="fas fa-heart" aria-hidden="true"></i> by <a href="https://github.com/alaajerbi">Alaa Jerbi.</a></p>
+    </div>
+    </div>
+  
+
+</body>
+<script src="js/script.js" type="text/javascript"></script>
+</html>
