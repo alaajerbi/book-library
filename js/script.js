@@ -89,14 +89,6 @@
             if (localStorage.getItem("library") != null) {
                 library = JSON.parse(localStorage.getItem("library"));
             }
-            else {
-                library = [      
-                    new Book("Models", "Mark Manson", 250, true),
-                    new Book("The Seven Habits of Highly Effective People", "Stephen R Covey", 300, true),
-                    new Book("12 Rules for Life", "Jordan Petterson", 500, false),
-                    new Book("The Subtle Art of Not Giving a F*ck", "Mark Manson", 170, false)
-                ];
-            }
             renderLibrary();
         }
         else {
