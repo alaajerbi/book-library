@@ -34,8 +34,8 @@
     }
     function addBookToLibrary(){
 
-        if (titleInput.value.trim() !=="" && authorInput.value.trim()!=="" && pagesInput.value.trim()!=="" && readInput.value.trim()!=="") {
-            let newBook = new Book(titleInput.value, authorInput.value, pagesInput.value, readInput.value);
+        if (titleInput.value.trim() !=="" && authorInput.value.trim()!=="" && pagesInput.value.trim()!==""  && pagesInput.value.trim() >= 1 && !isNaN(pagesInput.value.trim()) && readInput.value.trim()!=="") {
+            let newBook = new Book(titleInput.value.trim(), authorInput.value.trim(), parseInt(pagesInput.value.trim()), readInput.value.trim());
             library.push(newBook);
 
             if (typeof(Storage) !== "undefined") {
